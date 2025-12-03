@@ -1,0 +1,158 @@
+<header class="topnav">
+  <div class="brand-wrap">
+    <div class="brand">FinSight</div>
+    <div class="tagline">Transaction Tracking System</div>
+  </div>
+  <div class="header-cta">
+    <a [routerLink]="['/register']" class="btn btn-outline">Register</a>
+    <a [routerLink]="['/login']" class="btn btn-primary">Login</a>
+  </div>
+</header>
+
+<main class="main">
+  <section class="hero">
+    <div class="hero-left">
+      <h1>All your finances — one clear view.</h1>
+      <p class="lead">
+        Link bank accounts, unify UPI, card & ATM transactions, annotate spends and get smart monthly
+        insights — secure, private, and easy to use.
+      </p>
+
+      <div class="cta-block">
+        <a [routerLink]="['/register']" class="btn btn-primary large">Create your account — Register</a>
+        <div class="already">
+          Are you already a customer? <a [routerLink]="['/login']" class="text-link">Login</a>
+        </div>
+      </div>
+      <ul class="trust">
+        <li>🔒 Bank-grade security</li>
+        <li>🛡️ We never store credentials</li>
+        <li>🔗 Works with AA & major banks</li>
+      </ul>
+    </div>
+
+    <div class="hero-right" aria-hidden="true">
+      <div class="mock-card">
+        <div class="mock-header">Dashboard preview</div>
+        <div class="mock-body">
+          <div class="kpis">
+            <div class="kpi">
+              <div class="kpi-value">₹ <span>12,340</span></div>
+              <div class="kpi-label">This month</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-value">3</div>
+              <div class="kpi-label">Accounts</div>
+            </div>
+          </div>
+          <div class="tx-list">
+            <div class="tx"><strong>02 Oct</strong> — Swiggy — <span class="tx-amt">₹100</span></div>
+            <div class="tx"><strong>01 Oct</strong> — GPay — <span class="tx-amt">₹500</span></div>
+            <div class="tx"><strong>30 Sep</strong> — ATM — <span class="tx-amt">₹2,000</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <h2>Key features</h2>
+    <div class="feature-grid">
+      <article class="feature">
+        <h3>Link Accounts</h3>
+        <p>Securely link multiple bank accounts via Account Aggregator or aggregator partners.</p>
+      </article>
+      <article class="feature">
+        <h3>Unified Transactions</h3>
+        <p>See UPI, card and ATM transactions in one place with filters and search.</p>
+      </article>
+      <article class="feature">
+        <h3>Smart Analytics</h3>
+        <p>Monthly spends, top vendors and trends with exportable reports.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="how">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Consent</h4>
+        <p>Give secure consent to link an account.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Sync</h4>
+        <p>We sync your recent transactions (6 months by default).</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Analyze</h4>
+        <p>Tag transactions and see spending insights.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What customers say</h2>
+    <div class="test-grid">
+      <blockquote class="test">
+        <p>“FinSight pulled my finances into one dashboard — saved me time.”</p>
+        <footer>— Priya, Product Manager</footer>
+      </blockquote>
+      <blockquote class="test">
+        <p>“Great for budgeting and tax prep.”</p>
+        <footer>— Ram, Freelancer</footer>
+      </blockquote>
+      <blockquote class="test">
+        <p>“Secure and easy to link. Great way to track.”</p>
+        <footer>— Mia, Developer</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="careers">
+    <div class="careers-inner">
+      <div class="careers-left">
+        <h2>Join the FinSight team</h2>
+        <p>We’re building delightful, secure financial products. Interested? Apply below.</p>
+      </div>
+      <div class="careers-right">
+        <button class="btn btn-accent">Apply (static)</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="tech">
+    <h2>Built with</h2>
+    <div class="tech-grid" aria-hidden="true">
+      <span class="chip">Angular</span>
+      <span class="chip">Spring Boot</span>
+      <span class="chip">PostgreSQL</span>
+      <span class="chip">Account Aggregator</span>
+      <span class="chip">Docker</span>
+      <span class="chip">AWS</span>
+      <span class="chip">Chart.js</span>
+      <span class="chip">JWT</span>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="left">
+      <div class="brand">FinSight</div>
+      <p class="muted">We never store your bank credentials. Data encrypted in transit &amp; at rest.</p>
+    </div>
+    <div class="right">
+      <nav class="foot-links">
+        <a href="#">About</a>
+        <a href="#">Docs</a>
+        <a href="#">Privacy</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="copyright">© 2025 FinSight</div>
+    </div>
+  </div>
+</footer>

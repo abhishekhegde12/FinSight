@@ -1,0 +1,24 @@
+/* 1. Global Setup */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #e3ebfa; 
+}
+app-root {
+  display: block;
+  height: 100%;
+}
+
+
+:root {
+  --primary: #6387f3;          /* Deep Blue (Buttons, Branding) */
+  --primary-2: #4e68aa;        /* Darker Primary (Darker Text) */
+  --accent: #cdcdcf;           /* Light Blue (Page Background) */
+  --warm: #fdf2cd;             /* Warm Accent/Success (Header, Footer, Careers BG) */
+  
+  --muted: #555d69;            /* Dark Grey for muted text */
+  --text-dark: #07143a;        /* Very dark text */
+  --card: #ffffff;             /* White card background */
+  --shadow-primary: rgba(140, 169, 255, 0.25); 
+  --shadow-warm: rgba(255, 242, 198, 0.6);
+}

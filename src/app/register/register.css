@@ -1,0 +1,169 @@
+/* --- PAGE & CARD (Matches Login) --- */
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: var(--bg-page); 
+}
+
+.register-card {
+  background: var(--card);
+  padding: clamp(30px, 5vw, 40px);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px; /* Kept same as login for consistency */
+  text-align: center;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #0f0101;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+}
+
+/* --- FORM STYLES --- */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: var(--primary-2);
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+/* --- INPUT FIELDS --- */
+.form-control {
+  width: 100%;
+  box-sizing: border-box; /* Vital for layout */
+  padding: 12px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  background-color: #fff;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(140, 169, 255, 0.2);
+}
+
+/* --- NEW: INPUT GROUP (For Verify Buttons) --- */
+/* Puts the input and the button side-by-side */
+.input-group {
+    display: flex;
+    gap: 10px; 
+}
+
+.btn-verify {
+    padding: 0 20px;
+    border-radius: 8px;
+    border: 1px solid var(--primary);
+    background: white;
+    color: var(--primary);
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap; /* Prevents text wrapping */
+    transition: all 0.2s;
+}
+
+.btn-verify:hover:not(:disabled) {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-verify:disabled {
+    border-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* --- PASSWORD TOGGLE (Reused) --- */
+.input-container {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+/* Specific padding for password fields to clear the eye icon */
+.input-container .form-control {
+    padding-right: 45px; 
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem; /* Size for the emoji/icon */
+}
+
+/* --- BUTTONS & MESSAGES --- */
+.btn.large {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  background: var(--primary);
+  color: var(--card);
+  border: none;
+  cursor: pointer; 
+  transition: background-color 0.2s;
+}
+
+.btn.large:disabled {
+  background: var(--accent);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.validation-message {
+    color: #ff4d4f;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.success-message {
+    color: #28a745; /* Green */
+    margin-top: 4px;
+}
+
+.extra-links {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.text-link {
+    color: var(--primary-2);
+    font-weight: 700;
+    text-decoration: none;
+}

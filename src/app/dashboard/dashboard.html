@@ -1,0 +1,252 @@
+<!-- src/app/welcome/welcome.component.html -->
+<header>
+  <div class="container">
+    <div class="brand-wrap">
+      <div class="brand">FinSight</div>
+      <div class="tagline">Transaction Tracking System</div>
+    </div>
+
+    <div class="header-right">
+      <!-- Replace routerLink if you want plain anchors -->
+      <a routerLink="/register" class="link-register">Register</a>
+      <a routerLink="/login" class="link-login">Login</a>
+
+      <div class="notif" title="Notifications" aria-hidden="true">
+        <!-- inline bell SVG to avoid extra deps -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+             stroke="#0b63ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+        </svg>
+      </div>
+
+      <div class="avatar">AB</div>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <!-- Welcome + KPIs -->
+  <section class="welcome-row">
+    <div class="welcome-left">
+      <h1 class="welcome-title">Welcome, Abhishek 👋</h1>
+      <p class="welcome-sub">Here's a quick summary of your finances. Click Register or Login to continue.</p>
+
+      <div class="cta-inline">
+        <a routerLink="/register" class="btn btn-primary">Create your account — Register</a>
+
+        <span class="already">Are you already a customer?</span>
+        <a routerLink="/login" class="btn btn-outline small">Login</a>
+      </div>
+    </div>
+
+    <div class="kpi-row" aria-hidden="true">
+      <div class="kpi-card">
+        <div class="kpi-label">Total Balance</div>
+        <div class="kpi-value large">₹ 75,200</div>
+        <div class="kpi-meta small-muted">Last updated: Today, 8:22 PM</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">Monthly Spend</div>
+        <div class="kpi-value large debit">₹ 42,500</div>
+        <div class="kpi-meta small-muted">-12% vs last month</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">Total Credits</div>
+        <div class="kpi-value large credit">₹ 55,700</div>
+        <div class="kpi-meta small-muted">Total inflow this month</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard grid -->
+  <section id="dashboard" class="dashboard-grid">
+
+    <!-- Recent Transactions -->
+    <div class="content-box box-recent">
+      <div class="card-header">
+        <h3>Recent Transactions (Last 5)</h3>
+        <div class="small-muted">Quick view</div>
+      </div>
+
+      <table class="tx-table" aria-label="Recent transactions">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Amount</th>
+            <th>Vendor</th>
+            <th>App</th>
+            <th>Remarks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td class="amt debit">₹ 4,500</td>
+            <td>Grocery Mart</td>
+            <td>PayNow</td>
+            <td>Weekly essentials</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td class="amt debit">₹ 800</td>
+            <td>Cafe Bean</td>
+            <td>Credit Card</td>
+            <td>Lunch meeting</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td class="amt credit">₹ 25,000</td>
+            <td>Salary Inc.</td>
+            <td>Bank Transfer</td>
+            <td>Monthly income</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td class="amt debit">₹ 12,000</td>
+            <td>Rentals Co.</td>
+            <td>Auto Debit</td>
+            <td>Apartment rent</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td class="amt debit">₹ 350</td>
+            <td>Movie World</td>
+            <td>Debit Card</td>
+            <td>Weekend entertainment</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="tx-actions">
+        <button class="btn btn-primary">View All Transactions</button>
+        <button class="btn btn-outline">Add Note</button>
+        <button class="btn btn-outline">Export</button>
+      </div>
+    </div>
+
+    <!-- Analysis / chart placeholder -->
+    <div class="content-box box-analysis">
+      <div class="analysis-inner">
+        <h3>Expense Breakdown</h3>
+        <div class="analysis-row">
+          <svg class="donut-svg" viewBox="0 0 36 36" role="img" aria-label="donut">
+            <circle r="16" cx="18" cy="18" fill="transparent" stroke="#f6f9ff" stroke-width="8"></circle>
+            <circle r="16" cx="18" cy="18" fill="transparent" stroke="#0b63ff" stroke-width="8" stroke-dasharray="30 70" transform="rotate(-90 18 18)"></circle>
+            <circle r="10" cx="18" cy="18" fill="#fff"></circle>
+          </svg>
+
+          <div class="chart-legend">
+            <div class="legend-item"><span class="legend-dot blue"></span> Food</div>
+            <div class="legend-item"><span class="legend-dot teal"></span> Travel</div>
+            <div class="legend-item"><span class="legend-dot gold"></span> Shopping</div>
+            <div class="legend-item"><span class="legend-dot red"></span> Bills</div>
+          </div>
+        </div>
+
+        <p class="small-muted">Monthly spending trend and category breakdown (static preview)</p>
+      </div>
+    </div>
+
+    <!-- Right column stack -->
+    <div class="right-stack">
+      <div class="content-box card">
+        <div class="card-row">
+          <div>
+            <div class="small-muted">Total Spent This Year</div>
+            <div class="stat-value">₹ 4,50,000</div>
+            <div class="small-muted">+12% vs last year</div>
+          </div>
+          <div style="text-align:right">
+            <div class="small-muted">Accounts</div>
+            <div class="stat-value" style="color:var(--primary)">3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-box card">
+        <div class="card-row">
+          <div>
+            <div class="small-muted">Pending Payments</div>
+            <div class="stat-value" style="color:#d64545">₹ 50,000</div>
+          </div>
+          <div>
+            <div class="small-muted">Credits this month</div>
+            <div class="stat-value" style="color:#1a9a5a">₹ 1,50,000</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-box card">
+        <div style="display:flex; align-items:center; justify-content:space-between">
+          <div style="font-weight:800">Notifications</div>
+          <div class="small-muted">3</div>
+        </div>
+        <ul class="notif-list">
+          <li>• Spent ₹5,000 on Food this week</li>
+          <li>• Your monthly spending is 20% higher than last month</li>
+          <li>• Low balance in HDFC Account</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Action boxes -->
+    <div class="action-boxes">
+      <button class="action-box content-box">
+        <div class="action-icon">＋</div>
+        <div class="action-title">Add New Bank Account</div>
+        <div class="small-muted">Connect a new financial source</div>
+      </button>
+
+      <button class="action-box content-box">
+        <div class="action-icon">✎</div>
+        <div class="action-title">Purpose Entry</div>
+        <div class="small-muted">Categorize transactions</div>
+      </button>
+
+      <button class="action-box content-box">
+        <div class="action-icon">⬇</div>
+        <div class="action-title">Export Data</div>
+        <div class="small-muted">Download CSV / Excel</div>
+      </button>
+    </div>
+
+  </section>
+
+  <!-- quick tiles -->
+  <section class="quick-tiles">
+    <div class="tiles">
+      <div class="tile">
+        <div class="tile-icon">📄</div>
+        <div class="tile-text">All Transactions</div>
+      </div>
+      <div class="tile">
+        <div class="tile-icon">📝</div>
+        <div class="tile-text">Add Notes</div>
+      </div>
+      <div class="tile">
+        <div class="tile-icon">⬇</div>
+        <div class="tile-text">Export Data</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="brand">FinSight</div>
+      <div class="small-muted">We never store your bank credentials. Data encrypted in transit &amp; at rest.</div>
+      <div class="small-muted">© 2025 FinSight</div>
+    </div>
+
+    <div class="footer-links">
+      <a class="small-muted" href="#">About</a>
+      <a class="small-muted" href="#">Docs</a>
+      <a class="small-muted" href="#">Privacy</a>
+      <a class="small-muted" href="#">Contact</a>
+    </div>
+  </div>
+</footer>

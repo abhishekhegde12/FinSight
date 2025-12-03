@@ -1,0 +1,299 @@
+/* src/app/welcome/welcome.css */
+
+/* load Inter for good typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:host {
+  display: block; 
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+}
+
+:host, body {
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text-dark);
+}
+h1, h2, h3, h4 { color: var(--text-dark); line-height: 1.1; margin-top: 0; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 0.5em; }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); margin-bottom: 0.8em; }
+a{ text-decoration:none; color:inherit; }
+
+.main {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 36px 5vw 64px; 
+}
+
+.topnav {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:18px 5vw;
+  background: var(--primary-2); /* Dark Blue Header BG */
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(13, 31, 85, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 60;
+}
+.brand-wrap{ 
+  text-align:left; 
+  flex:0 0 auto; 
+  display: flex;
+  flex-direction: column;
+}
+.brand{ 
+  font-weight:900; 
+  font-size:3rem; 
+  color:#0f0101; /* FINISHED BRAND COLOR: #0F0101 */
+  letter-spacing:-1px; 
+  line-height: 1; 
+}
+.tagline{ 
+  color:var(--accent); /* Light blue for tagline */
+  font-size:0.9rem; 
+  margin-top:2px; 
+}
+.header-cta{ display:flex; gap:12px; align-items:center; }
+.header-cta .btn { 
+  padding: 8px 14px; 
+  border-radius: 10px; 
+  font-size: 0.9rem;
+  color: var(--card); /* Ensure header links are white */
+  border-color: var(--accent);
+  cursor: pointer;
+}
+.header-cta .btn-primary { 
+  background: var(--primary); 
+  color: var(--card);
+}
+
+/* --- BUTTONS & CTAS --- */
+.btn{ 
+  display:inline-flex; 
+  align-items:center; 
+  justify-content:center;
+  gap:8px; 
+  padding:10px 18px; 
+  border-radius:12px; 
+  cursor:pointer; 
+  font-weight:700;
+  white-space: nowrap;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+.btn-primary{ 
+  background: var(--primary); 
+  color:var(--card); 
+  box-shadow: 0 10px 20px var(--shadow-primary);
+}
+.btn-primary:hover{ background: var(--primary-2); }
+
+.btn-outline{ 
+  background: transparent; 
+  border-color: var(--primary); 
+  color: var(--primary-2);
+}
+.btn-outline:hover{ 
+  background: var(--accent); 
+  color: var(--text-dark); 
+}
+
+.btn-accent{ 
+  background: var(--card); /* White button for the careers section */
+  color: var(--primary); 
+  font-weight: 800;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.btn-accent:hover{ background: var(--primary); color: var(--card); }
+
+.btn.large{ 
+  padding:14px 28px; 
+  border-radius:14px; 
+  font-size:1.05rem; 
+  font-weight: 800;
+  box-shadow: 0 18px 48px var(--shadow-primary);
+}
+.text-link{ color: var(--primary); font-weight: 600; border-bottom: 2px solid var(--accent); }
+
+.cta-block{ display:flex; align-items:center; gap:20px; flex-wrap:wrap; margin-top: 24px; }
+
+/* --- HERO SECTION --- */
+.hero{ display:grid; grid-template-columns: 1fr minmax(300px, 480px); gap:48px; align-items:center; margin-top:30px; }
+.lead{ color:var(--muted); margin-bottom:18px; font-size:1.1rem; }
+.trust{ list-style:none; padding:0; margin:32px 0 0; color:var(--muted); display:flex; gap:20px; flex-wrap:wrap; font-size:0.9rem; }
+
+/* Mock card (Dashboard Preview - White Card) */
+.mock-card{ 
+  background:var(--card); 
+  border-radius:16px; 
+  padding:20px; 
+  box-shadow: 0 24px 60px var(--shadow-primary); 
+  border: 1px solid var(--primary); 
+}
+.mock-header{ font-weight:800; margin-bottom:12px; color:var(--primary-2); }
+.kpis{ display:flex; gap:16px; margin-bottom:16px; }
+.kpi{ 
+  background: #F8F8FF; /* Very light, off-white for internal background */
+  padding:14px; 
+  border-radius:12px; 
+  text-align:center; 
+  flex: 1; 
+}
+.kpi-value{ font-weight:800; font-size:1.4rem; color:var(--primary); }
+.tx-list{ 
+  background:var(--card); 
+  border-radius:10px; 
+  padding:12px; 
+  border: 1px solid var(--accent);
+}
+.tx { padding: 4px 0; font-size: 0.95rem; }
+
+/* --- SECTIONS --- */
+section{ padding-top: 60px; }
+
+/* features / grid (White Cards) */
+.feature-grid{ display:grid; gap:24px; grid-template-columns: repeat(3, 1fr); }
+.feature{ 
+  background:var(--card); 
+  padding:24px; 
+  border-radius:16px; 
+  box-shadow: 0 12px 40px rgba(7,20,58,0.04); 
+  border-top: 5px solid var(--primary); 
+}
+
+/* steps, testimonials (White Cards) */
+.steps{ display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; }
+.step{ 
+  background:var(--card); 
+  padding:20px; 
+  border-radius:14px; 
+  text-align:center; 
+  box-shadow: 0 10px 30px rgba(7,20,58,0.03); 
+  border-bottom: 4px solid var(--accent); 
+}
+.step-num{ 
+  font-weight:900; 
+  font-size:2rem; 
+  color:var(--primary); 
+  margin-bottom: 8px;
+}
+
+/* testimonials (White Cards) */
+.test-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; }
+.test{ 
+  padding:20px; 
+  border-radius:14px; 
+  background:var(--card); 
+  box-shadow: 0 12px 34px rgba(7,20,58,0.03); 
+  border-left: 3px solid var(--primary); /* Deep blue accent */
+}
+.test p{ margin-top: 0; font-style: italic; color: var(--primary-2); }
+.test footer{ margin-top: 10px; font-weight: 600; font-size: 0.9rem; color: var(--muted); }
+
+/* careers (Dark Blue section background) */
+.careers-inner{ 
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  gap:16px; 
+  background: var(--primary-2); /* Dark Blue */
+  padding:30px; 
+  border-radius:16px; 
+}
+.careers-inner h2 { color: var(--card); } /* White text on dark background */
+.careers-inner p { color: var(--accent); } /* Light blue text for body */
+.careers-right .btn-accent{ padding:12px 20px; font-weight:800; }
+
+/* tech chips */
+.tech-grid{ display:flex; gap:12px; flex-wrap:wrap; margin-top:16px; }
+.chip{ 
+  background:var(--card); 
+  padding:8px 14px; 
+  border-radius:999px; 
+  box-shadow:0 6px 20px rgba(7,20,58,0.04); 
+  font-weight:700; 
+  color:var(--primary-2); 
+  font-size: 0.9rem;
+  border: 1px solid var(--accent);
+}
+
+/* --- FOOTER (Dark Blue Background) --- */
+.site-footer{ 
+  margin-top:50px; 
+  padding:24px 5vw; 
+  border-top:1px solid rgba(7,20,58,0.04); 
+  background: var(--primary-2); /* Dark Blue */
+}
+.footer-inner{ 
+  max-width: 1300px;
+  margin: 0 auto;
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  gap:20px; 
+  flex-wrap:wrap; 
+  color:var(--accent); /* Light blue text on dark background */
+  font-size: 0.9rem;
+}
+.footer-inner .brand { font-size: 1.6rem; margin-bottom: 4px; color: var(--card); }
+.foot-links{ display: flex; gap: 16px; }
+.foot-links a { color: var(--card); font-weight: 600; }
+.copyright{ margin-top: 10px; }
+
+/* --- RESPONSIVE RULES --- */
+
+/* Tablet & Smaller Desktop */
+@media (max-width: 1199px){
+  .hero{ 
+    grid-template-columns: 1fr 400px; 
+    gap: 32px; 
+  }
+  .feature-grid, .test-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+/* Mobile & Tablet Portrait */
+@media (max-width: 768px){
+  .header-cta{ display:none; } 
+  .brand{ font-size:2.2rem; } 
+  .tagline{ display: block; } 
+  .topnav { padding: 18px 24px; }
+  .main { padding: 36px 24px 64px; }
+
+  .hero{ 
+    grid-template-columns: 1fr; 
+    gap: 24px;
+  }
+  .hero-right{ order: -1; margin-bottom: 12px; }
+  .mock-card{ max-width: 400px; margin-left: auto; margin-right: auto; }
+
+  .feature-grid, .test-grid, .steps{ 
+    grid-template-columns: 1fr; 
+  }
+
+  .careers-inner{ flex-direction: column; align-items: stretch; text-align: center; }
+  .careers-right { margin-top: 12px; }
+  .careers-right .btn-accent { width: 100%; max-width: 300px; margin: 0 auto; }
+}
+
+/* Very Small Mobile */
+@media (max-width: 480px) {
+    .cta-block{ 
+      flex-direction: column; 
+      align-items: stretch;
+    }
+    .cta-block .btn.large { width: 100%; }
+    .kpi { padding: 10px; }
+    .trust{ flex-direction: column; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+    .foot-links { margin-top: 10px; }
+}
