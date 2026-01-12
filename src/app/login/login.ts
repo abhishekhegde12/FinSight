@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FormsModule, NgForm } from '@angular/forms';
-import { FormValidationDirective  } from './form-validation.directive';
+// import { FormValidationDirective  } from './form-validation.directive';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, RouterLink, FormsModule, FormValidationDirective],
+  imports: [CommonModule, RouterLink, FormsModule],
   templateUrl: './login.html',
   styleUrl: './login.css'
 })
