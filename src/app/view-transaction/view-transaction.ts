@@ -10,5 +10,13 @@ import { RouterLink } from '@angular/router';
   styleUrl: './view-transaction.css',
 })
 export class ViewTransaction {
+  showModal = false;
 
+  openModal() {
+    this.showModal = true;
+    console.log("hitting edit button");
+  }
+  closeModal() {
+    this.showModal = false;
+  }
 }
