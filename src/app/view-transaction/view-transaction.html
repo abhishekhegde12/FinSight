@@ -3,22 +3,138 @@
     <div class="brand">FinSight</div>
     <div class="tagline">Transaction Tracking System</div>
   </div>
+
   <div class="header-cta">
-    <a [routerLink]="['/register']" class="btn btn-outline">Register</a>
-    <a [routerLink]="['/login']" class="btn btn-primary">Login</a>
+    <a [routerLink]="['/user-dashboard']" class="btn btn-outline">Home</a>
+    <a [routerLink]="['/login']" class="btn btn-primary">Logout</a>
   </div>
 </header>
 
-<main>
+<main class="main">
+  <h2 class="welcome">Welcome, User</h2>
 
+  <section class="first">
+    <div class="transaction">
+
+      <table class="transTable">
+        <thead>
+          <tr>
+            <th>Amount</th>
+            <th>Credit / Debit</th>
+            <th>From / To</th>
+            <th>Transaction No</th>
+            <th>Vendor App</th>
+            <th>Remarks</th>
+            <th>Modify</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>700</td>
+            <td class="debit">Debit</td>
+            <td>Super Market</td>
+            <td>TXN12345</td>
+            <td>PayTM</td>
+            <td>Grocery</td>
+            <td><button class="btn small">Edit</button></td>
+          </tr>
+
+          <tr>
+            <td>15000</td>
+            <td class="debit">Debit</td>
+            <td>House Owner</td>
+            <td>TXN67890</td>
+            <td>PayTM</td>
+            <td>Rent</td>
+            <td><button class="btn small">Edit</button></td>
+          </tr>
+
+          <tr>
+            <td>450</td>
+            <td class="credit">Credit</td>
+            <td>Friend</td>
+            <td>TXN54321</td>
+            <td>PhonePe</td>
+            <td>Loan</td>
+            <td><button class="btn small">Edit</button></td>
+          </tr>
+
+          <!-- dummy rows to show vertical scrolling -->
+          <tr>
+            <td>1200</td>
+            <td class="debit">Debit</td>
+            <td>Amazon</td>
+            <td>TXN11111</td>
+            <td>Amazon Pay</td>
+            <td>Shopping</td>
+            <td><button class="btn small">Edit</button></td>
+          </tr>
+
+          <tr>
+            <td>3000</td>
+            <td class="credit">Credit</td>
+            <td>Office</td>
+            <td>TXN22222</td>
+            <td>GPay</td>
+            <td>Salary</td>
+            <td><button class="btn small">Edit</button></td>
+          </tr>
+
+          <tr>
+            <td>800</td>
+            <td class="debit">Debit</td>
+            <td>Restaurant</td>
+            <td>TXN33333</td>
+            <td>PhonePe</td>
+            <td>Dinner</td>
+            <td><button class="btn small">Edit</button></td>
+          </tr>
+
+          <tr>
+            <td>800</td>
+            <td class="debit">Debit</td>
+            <td>Restaurant</td>
+            <td>TXN33333</td>
+            <td>PhonePe</td>
+            <td>Dinner</td>
+            <td><button class="btn small">Edit</button></td>
+          </tr>
+
+          <tr>
+            <td>800</td>
+            <td class="debit">Debit</td>
+            <td>Restaurant</td>
+            <td>TXN33333</td>
+            <td>PhonePe</td>
+            <td>Dinner</td>
+            <td><button class="btn small">Edit</button></td>
+          </tr>
+          <tr>
+            <td>800</td>
+            <td class="debit">Debit</td>
+            <td>Restaurant</td>
+            <td>TXN33333</td>
+            <td>PhonePe</td>
+            <td>Dinner</td>
+            <td><button class="btn small">Edit</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="left">
       <div class="brand">FinSight</div>
-      <p class="muted">We never store your bank credentials. Data encrypted in transit &amp; at rest.</p>
+      <p class="muted">
+        We never store your bank credentials. Data encrypted in transit &amp; at rest.
+      </p>
     </div>
+
     <div class="right">
       <nav class="foot-links">
         <a href="#">About</a>
