@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './view-transaction.html',
   styleUrl: './view-transaction.css',
 })
-export class ViewTransaction {
+export class ViewTransactionComponent {
   showModal = false;
 
   openModal() {
