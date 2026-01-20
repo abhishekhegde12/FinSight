@@ -1,39 +1,25 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { ReactiveFormsModule , FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-transaction',
   standalone: true,
-  imports: [CommonModule, RouterLink, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './add-transaction.html',
-  styleUrl: './add-transaction.css',
+  styleUrl: './add-transaction.css'
 })
 export class AddTransactionComponent {
-  txForm!: FormGroup;
 
-  constructor(
-    private fb: FormBuilder,
-    private router: Router
-  ) {
-    this.txForm = this.fb.group({
-      date: ['', Validators.required],
-      amount: ['', Validators.required],
-      type: ['', Validators.required],
-      party: ['', Validators.required],
-      txnNo: ['', Validators.required],
-      vendor: ['', Validators.required],
-      remarks: ['']
-    });
-  }
+  constructor(private router: Router) {}
 
-  save() {
-    if (this.txForm.invalid) return;
+  onSubmit(form: NgForm) {
+    if (form.invalid) return;
 
-    console.log('Transaction saved:', this.txForm.value);
+    console.log('Transaction Data:', form.value);
 
-    //API Calling
+    // later → API call
 
     this.router.navigate(['/view-transaction']);
   }
