@@ -1,0 +1,1 @@
+-- Initial schema (empty for now)
