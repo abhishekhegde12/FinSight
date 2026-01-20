@@ -11,9 +11,73 @@
 </header>
 
 <main class="main">
-    
-</main>
+  <div class="formDiv">
+    <div class="formCard">
+      <h2>Add Transaction</h2>
 
+      <form [formGroup]="txForm" (ngSubmit)="save()">
+
+        <label>
+          Date
+          <input type="date" formControlName="date" required>
+        </label>
+
+        <label>
+          Amount
+          <input type="number" formControlName="amount" required>
+        </label>
+
+        <label>
+          Credit / Debit
+          <select formControlName="type" required>
+            <option value="">Select</option>
+            <option>Credit</option>
+            <option>Debit</option>
+          </select>
+        </label>
+
+        <label>
+          From / To
+          <input type="text" formControlName="party" required>
+        </label>
+
+        <label>
+          Transaction Number
+          <input type="text" formControlName="txnNo" required>
+        </label>
+
+        <label>
+          Vendor App
+          <select formControlName="vendor" required>
+            <option value="">Select</option>
+            <option>PayTM</option>
+            <option>PhonePe</option>
+            <option>GPay</option>
+            <option>Amazon Pay</option>
+          </select>
+        </label>
+
+        <label>
+          Remarks (optional)
+          <input type="text" formControlName="remarks">
+        </label>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-outline"
+                  [routerLink]="['/view-transaction']">
+            Cancel
+          </button>
+
+          <button type="submit" class="btn btn-primary"
+                  [disabled]="txForm.invalid">
+            Save
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</main>
 
 <footer class="site-footer">
   <div class="footer-inner">
