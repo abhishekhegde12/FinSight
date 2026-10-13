@@ -3,12 +3,12 @@
 
 fe_path="/c/Users/Abhishek/OneDrive/Desktop/FinSight/frontend/finsight-frontend"
 
-cd "$fe_path" || { 
-    echo "Failed to change directory to $fe_path"; 
-    exit 1; 
+cd "$fe_path" || {
+    echo "Failed to change directory to $fe_path";
+    exit 1;
     }
 
-if ! command -v npm &> /dev/null; 
+if ! command -v npm &> /dev/null;
 then
     echo "npm could not be found. Please install Node.js and npm."
     exit 1

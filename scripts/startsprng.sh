@@ -15,4 +15,3 @@ fi
 
 echo "Starting backend server..."
 ./mvnw.cmd spring-boot:run
-    
