@@ -5,7 +5,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/finsight
     username: finsight_dev
-    password: finsight_dev
+    password: finsight@123
     driver-class-name: org.postgresql.Driver
 
   jpa:
